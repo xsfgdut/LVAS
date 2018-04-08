@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <!--上部分-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8">
+
+            <!--播放器-->
+            <zhongjing.dcyy.com.widget.widget.media.TextureRenderView
+                android:id="@+id/activity_play_sv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!--加载动画-->
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                app:indicatorColor="#ffffff"
+                app:indicatorName="LineScalePartyIndicator"
+                />
+
+            <!--竖屏上部分播放器上面的东西-->
+            <RelativeLayout
+                android:id="@+id/activity_play_port_up_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--引导页面-->
+                <LinearLayout
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/over"
+                        android:layout_width="2dp"
+                        android:layout_height="15dp">
+                    </View>
+
+                    <View
+                        android:id="@+id/next"
+                        android:layout_width="2dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="30dp">
+                    </View>
+                </LinearLayout>
+
+                <!--计时器-->
+                <Chronometer
+                    android:id="@+id/activity_play_timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:format="00:00:00"
+                    android:textColor="#ff0000"
+                    android:textSize="20dp"
+                    android:visibility="gone"/>
+
+                <!--音量亮度调节界面-->
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/activity_play_bright"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/volume_bright_bg"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginTop="6dp"
+                        android:src="@drawable/bright"/>
+
+                    <ProgressBar
+                        android:id="@+id/bright_pb"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="120dp"
+                        android:layout_height="12dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:max="255"
+                        android:progress="40"/>
+
+                </LinearLayout>
+
+
+                <!--上部分返回键,全屏键盘-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <Button
+                        android:id="@+id/activity_play_btn_back"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/vertical_btn_back_v"
+                        android:onClick="click" />
+
+                    <Button
+                        android:id="@+id/activity_play_btn_fullscreen"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/vertical_btn_fullscreenv_v"
+                        android:onClick="click" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/activity_play_volume"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/volume_bright_bg"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginTop="6dp"
+                        android:src="@drawable/volume"/>
+
+                    <ProgressBar
+                        android:id="@+id/volume_pb"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="120dp"
+                        android:layout_height="12dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:progress="40"
+                        android:max="100"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+            <!--横屏播放器上面的东西-->
+            <RelativeLayout
+                android:id="@+id/activity_play_land_contain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <!--音量亮度调节界面-->
+                <LinearLayout
+                    android:id="@+id/activity_play_volume_land"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/volume_bright_bg"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginTop="6dp"
+                        android:src="@drawable/volume"/>
+
+                    <ProgressBar
+                        android:id="@+id/volume_pb_land"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="120dp"
+                        android:layout_height="12dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:max="100"
+                        android:progress="40"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/activity_play_bright_land"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/volume_bright_bg"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginTop="6dp"
+                        android:src="@drawable/bright"/>
+
+                    <ProgressBar
+                        android:id="@+id/bright_pb_land"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="120dp"
+                        android:layout_height="12dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:max="255"
+                        android:progress="40"/>
+
+                </LinearLayout>
+
+
+                <Chronometer
+                    android:id="@+id/activity_play_land_timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="60dp"
+                    android:layout_marginLeft="10dp"
+                    android:format="00:00:00"
+                    android:textColor="#ff0000"
+                    android:textSize="20dp"
+                    android:visibility="gone"
+                    />
+
+                <ImageView
+                    android:id="@+id/activity_play_land_btn_unlock"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:onClick="click"
+                    android:padding="5dp"
+                    android:src="@drawable/land_btn_unlock"/>
+
+                <RelativeLayout
+                    android:id="@+id/activity_play_land_rl_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <Button
+                        android:id="@+id/activity_play_land_btn_back"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/vertical_btn_back"
+                        android:onClick="click"
+                        android:visibility="gone"/>
+
+                    <Button
+                        android:id="@+id/activity_play_land_btn_fullscreen"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/vertical_btn_fullscreen"
+                        android:onClick="click"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <!--android:paddingTop="8dp"-->
+                <!--android:paddingBottom="8dp"-->
+                <RelativeLayout
+                    android:id="@+id/activity_play_land_rl_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:animateLayoutChanges="true"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/lightgray1"
+                        android:baselineAligned="false"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:id="@+id/activity_play_btn_play_land"
+                            android:layout_width="@dimen/land_width_function"
+                            android:layout_height="@dimen/land_height_function"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:onClick="click"
+                            android:padding="7dp"
+                            android:src="@drawable/ic_play_pause"/>
+
+                        <ImageView
+                            android:id="@+id/activity_play_btn_vcr_land1"
+                            android:layout_width="@dimen/land_width_function"
+                            android:layout_height="@dimen/land_height_function"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:onClick="click"
+                            android:padding="7dp"
+                            android:src="@drawable/land_btn_vcr_selector"/>
+
+                        <ImageView
+                            android:id="@+id/activity_play_btn_record_land"
+                            android:layout_width="@dimen/land_width_function"
+                            android:layout_height="@dimen/land_height_function"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:padding="7dp"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:src="@drawable/land_btn_voice_selector" />
+
+
+                        <ImageView
+                            android:id="@+id/activity_play_btn_camera_land"
+                            android:layout_width="@dimen/land_width_function"
+                            android:layout_height="@dimen/land_height_function"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:onClick="click"
+                            android:padding="7dp"
+                            android:src="@drawable/land_btn_camera_selector"/>
+
+                        <ImageView
+                            android:id="@+id/activity_play_btn_sound_land"
+                            android:layout_width="@dimen/land_width_function"
+                            android:layout_height="@dimen/land_height_function"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:contentDescription="lightness"
+                            android:onClick="click"
+                            android:padding="7dp"
+                            android:src="@drawable/land_btn_no_sound_selector"/>
+
+                        <ImageView
+                            android:id="@+id/activity_play_btn_noise_land"
+                            android:layout_width="@dimen/land_width_function"
+                            android:layout_height="@dimen/land_height_function"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:onClick="click"
+                            android:padding="7dp"
+                            android:src="@drawable/land_btn_sound_selector"/>
+
+                        <ImageView
+                            android:id="@+id/activity_play_btn_light_land"
+                            android:layout_width="@dimen/land_width_function"
+                            android:layout_height="@dimen/land_height_function"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:onClick="click"
+                            android:padding="7dp"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:src="@drawable/land_btn_brightness_selector"/>
+
+                        <ImageView
+                            android:id="@+id/activity_play_btn_menu_land"
+                            android:layout_width="@dimen/land_width_function"
+                            android:layout_height="@dimen/land_height_function"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:onClick="click"
+                            android:padding="7dp"
+                            android:src="@drawable/land_btn_file_selector"/>
+                        <ImageView
+                            android:id="@+id/activity_play_btn_closemenu_land"
+                            android:layout_width="@dimen/land_width_function"
+                            android:layout_height="@dimen/land_height_function"
+                            android:layout_weight="1"
+                            android:onClick="click"
+                            android:padding="7dp"
+                            android:src="@drawable/land_btn_wifi_selector"/>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/activity_play_land_rl_right"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_above="@+id/activity_play_land_rl_bottom"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginRight="18dp"
+                    android:background="@drawable/btn_black_trans"
+                    android:clickable="true"
+                    >
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/vertical_btn_ok_bg"
+                        android:scaleType="centerInside"/>
+
+                    <ImageView
+                        android:id="@+id/activity_play_btn_ok_land"
+                        android:layout_width="35dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:onClick="click"
+                        android:padding="5dp"
+                        android:src="@drawable/land_btn_ok_selector"/>
+
+                    <ImageView
+                        android:id="@+id/activity_play_btn_up_land"
+                        android:layout_width="@dimen/land_width_menu"
+                        android:layout_height="@dimen/land_height_menu"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:onClick="click"
+                        android:padding="5dp"
+                        android:src="@drawable/land_btn_up_selector"/>
+
+                    <ImageView
+                        android:id="@+id/activity_play_btn_down_land"
+                        android:layout_width="@dimen/land_width_menu"
+                        android:layout_height="@dimen/land_height_menu"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:onClick="click"
+                        android:padding="5dp"
+                        android:src="@drawable/land_btn_down_selector"/>
+
+                    <ImageView
+                        android:id="@+id/activity_play_btn_left_land"
+                        android:layout_width="@dimen/land_width_menu"
+                        android:layout_height="@dimen/land_height_menu"
+                        android:layout_centerVertical="true"
+                        android:onClick="click"
+                        android:padding="5dp"
+                        android:src="@drawable/land_btn_left_selector"/>
+
+                    <ImageView
+                        android:id="@+id/activity_play_btn_right_land"
+                        android:layout_width="@dimen/land_width_menu"
+                        android:layout_height="@dimen/land_height_menu"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:onClick="click"
+                        android:padding="5dp"
+                        android:src="@drawable/land_btn_right_selector"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <!--竖屏部分的容器-->
+        <RelativeLayout
+            android:id="@+id/activity_play_port_down_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2"
+            android:background="#161616">
+
+            <ImageView
+                android:id="@+id/activity_play_btn_vcr"
+                android:layout_width="@dimen/vertical_width_function"
+                android:layout_height="@dimen/vertical_height_function"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/btn_black"
+                android:onClick="click"
+                android:padding="12dp"
+                android:src="@drawable/vertical_btn_vcr"/>
+
+            <ImageView
+                android:id="@+id/activity_play_btn_menu"
+                android:layout_width="@dimen/vertical_width_function"
+                android:layout_height="@dimen/vertical_height_function"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="45dp"
+                android:layout_marginLeft="25dp"
+                android:background="@drawable/btn_black"
+                android:onClick="click"
+                android:padding="12dp"
+                android:src="@drawable/vertical_btn_menu"/>
+
+            <ImageView
+                android:id="@+id/activity_play_btn_closemenu"
+                android:layout_width="@dimen/vertical_width_function"
+                android:layout_height="@dimen/vertical_height_function"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="45dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/btn_black"
+                android:onClick="click"
+                android:padding="12dp"
+                android:src="@drawable/vertical_btn_closemenu"/>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/vertical_center_bg">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/vertical_circle_mid"/>
+
+                <ImageView
+                    android:id="@+id/activity_play_btn_left"
+                    android:layout_width="@dimen/vertical_width_menu"
+                    android:layout_height="@dimen/vertical_height_menu"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:onClick="click"
+                    android:padding="20dp"
+                    android:src="@drawable/vertical_btn_left_selector"/>
+
+                <ImageView
+                    android:id="@+id/activity_play_btn_down"
+                    android:layout_width="@dimen/vertical_width_menu"
+                    android:layout_height="@dimen/vertical_height_menu"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="click"
+                    android:padding="20dp"
+                    android:src="@drawable/vertical_btn_down_selector"/>
+
+                <ImageView
+                    android:id="@+id/activity_play_btn_right"
+                    android:layout_width="@dimen/vertical_width_menu"
+                    android:layout_height="@dimen/vertical_height_menu"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:onClick="click"
+                    android:padding="20dp"
+                    android:src="@drawable/vertical_btn_right_selector"/>
+
+                <ImageView
+                    android:id="@+id/activity_play_btn_up"
+                    android:layout_width="@dimen/vertical_width_menu"
+                    android:layout_height="@dimen/vertical_height_menu"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:cropToPadding="true"
+                    android:onClick="click"
+                    android:padding="20dp"
+                    android:src="@drawable/vertical_btn_up_selector"/>
+
+                <ImageView
+                    android:id="@+id/activity_play_btn_ok"
+                    android:layout_width="60dp"
+                    android:layout_height="55dp"
+                    android:layout_alignLeft="@+id/activity_play_btn_up"
+                    android:layout_alignStart="@+id/activity_play_btn_up"
+                    android:layout_centerVertical="true"
+                    android:onClick="click"
+                    android:padding="15dp"
+                    android:src="@drawable/vertical_btn_ok_selector"/>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/activity_play_btn_camera"
+                android:layout_width="@dimen/vertical_width_function"
+                android:layout_height="@dimen/vertical_height_function"
+                android:layout_alignLeft="@+id/activity_play_btn_menu"
+                android:layout_alignStart="@+id/activity_play_btn_menu"
+                android:layout_alignTop="@+id/activity_play_btn_vcr"
+                android:background="@drawable/btn_black"
+                android:onClick="click"
+                android:padding="12dp"
+                android:src="@drawable/vertical_btn_camera"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

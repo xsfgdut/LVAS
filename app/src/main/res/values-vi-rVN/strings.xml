@@ -1,0 +1,83 @@
+<resources>
+    <string name="app_name">ZJBOX</string>
+
+    <!--SettingsActivity-->
+    <string name="wifi_name">Tên không thể để trống</string>
+    <string name="wifi_psw">Mật khẩu không thể để trống</string>
+
+    <string name="set_error">Thiết thất bại, hãy thử lại</string>
+
+    <string name="set_name_success">Đặt tên thành công, sau khi khởi động lại để có hiệu lực</string>
+    <string name="set_name_fail">Đặt tên thất bại, hãy thử lại</string>
+
+    <string name="set_psw_success">Sau khi có hiệu lực mật khẩu thành công, khởi động lại thiết bị</string>
+    <string name="set_psw_fail">Mật khẩu thất bại, hãy thử lại</string>
+
+    <string name="reset_success">Khôi phục cài đặt nhà máy thành công</string>
+    <string name="reset_fail">Nhà máy Thiết lập lại thất bại, hãy thử lại</string>
+
+    <!--PlayActivity-->
+    <string name="line_error">Không thể kết nối, kiểm tra mạng</string>
+
+    <!--activity_setting-->
+    <string name="settings">thiết lập</string>
+    <string name="change_wifi_name">Thay đổi tên của WiFi</string>
+    <string name="change_wifi_psw">Thay đổi mật khẩu WiFi</string>
+    <string name="change_function">Các tính năng</string>
+    <string name="change_reset">Khôi phục cài đặt nhà máy</string>
+
+    <string name="change_dlg_wifi_name">Thay đổi tên của WiFi</string>
+    <string name="change_dlg_wifi_psw">Thay đổi mật khẩu WiFi</string>
+    <string name="change_dlg_psw_tips">Mật khẩu ít nhất 8 ký tự</string>
+
+    <!--activity_splash-->
+    <string name="play">chơi</string>
+    <string name="set_wifi">thiết lập wIFI</string>
+    <string name="save_photo"></string>
+
+    <!--activity_cache-->
+    <string name="offline_caching">bộ nhớ đệm ẩn</string>
+    <string name="delete">xóa bỏ</string>
+    <string name="connect">Hãy wifi hộp kết nối tín hiệu, tên mặc định ZJBox</string>
+
+    <!--activity_cache_video_land-->
+    <string name="play_duration">thời gian chơi</string>
+    <string name="total_duration">Tổng thời gian</string>
+
+    <!--item_cache_activity-->
+    <string name="video_name">tên video</string>
+    <string name="video_size">kích thước video</string>
+
+    <!--name_dialog-->
+    <string name="cancel">bị hủy bỏ</string>
+    <string name="sure">xác định</string>
+
+    <!--psw_dialog-->
+    <string name="hint">Mật khẩu ít nhất 8 ký tự</string>
+
+    <!--reset_dialog-->
+    <string name="confirm_reset">Bạn có chắc chắn bạn muốn khôi phục cài đặt gốc?</string>
+    <string name="Checknet">Vui lòng kiểm tra kết nối WIFI</string>
+    <string name="thiswifi">wIFI hiện tại:</string>
+
+
+    <!--CheckNetActivity-->
+    <string name="quit">Nhấn lần nữa để thoát khỏi chương trình</string>
+    <string name="quit_setting">Nhấn một lần nữa để thoát khỏi thiết</string>
+    <string name="none">không</string>
+    <string name="wifi_notconnected">wifi không kết nối</string>
+    <string name="wifi_not_open">wifi không mở cửa</string>
+    <string name="checkwifi">Hãy tự kiểm tra WIFI</string>
+    <string name="checkwifi2">Kiểm tra wIFI</string>
+    <string name="next">bước tiếp theo</string>
+    <string name="get_wifi_channel">WIFI kênh hiện tại</string>
+    <string name="change_wifi_channel">Thay đổi WIFI kênh</string>
+    <string name="setchannel_success">Sự thành công thiết lập kênh</string>
+    <string name="setchannel_fail">Thiết lập kênh thất bại, hãy thử lại</string>
+    <string name="getchannel_success">Kênh mua lại thành công : </string>
+    <string name="getchannel_fail">Thất bại để có được kênh</string>
+    <string name="chosechn">Vui lòng chọn kênh</string>
+    <string name="change_wifi_port">串口帧头(为16进制格式0x00-0xff，长度4位</string>
+    <string name="change_wifi_sound">声音</string>
+
+</resources>

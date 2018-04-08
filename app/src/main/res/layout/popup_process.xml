@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:padding="5dp"
+              android:layout_width="match_parent"
+              android:layout_height="30dp">
+    <TextView
+        android:id="@+id/tv_item_name"
+        android:layout_width="wrap_content"
+        android:textColor="@android:color/white"
+        android:layout_height="wrap_content"
+        android:text="0"/>
+    <SeekBar
+        android:id="@+id/bright_pb_land"
+        android:layout_width="400dp"
+        android:progress="0"
+        android:max="100"
+        android:layout_height="15dp"/>
+
+    <TextView
+        android:id="@+id/tv_crtctrl_num"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"/>
+
+
+</LinearLayout>

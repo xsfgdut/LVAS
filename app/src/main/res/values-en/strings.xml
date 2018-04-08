@@ -1,0 +1,81 @@
+<resources>
+    <string name="app_name">ZJBOX</string>
+    <string name="Checknet">PLEASE CHECK THE WIFI CONNECTION</string>
+    <string name="thiswifi">THIS WIFI:</string>
+    <string name="connect">Please connect box wifi signal, the default name ZJBox</string>
+    <string name="checkwifi2">Check WIFI</string>
+    <string name="next">Next</string>
+
+    <!--SettingsActivity-->
+    <string name="wifi_name">The name cannot be empty</string>
+    <string name="wifi_psw">Password cannot be empty</string>
+
+    <string name="set_error">Setup failed, please try again</string>
+
+    <string name="set_name_success">Set the name is successful, take effect after reboot</string>
+    <string name="set_name_fail">Set the name of failure, please try again</string>
+
+    <string name="set_psw_success">A password is successful, take effect after reboot</string>
+    <string name="set_psw_fail">Failed to set the password, please try again</string>
+
+    <string name="reset_success">To restore factory Settings</string>
+    <string name="reset_fail">Failed to restore the factory Settings, please try again</string>
+
+    <!--PlayActivity-->
+    <string name="line_error">Unable to connect, please check the network</string>
+
+    <!--activity_setting-->
+    <string name="settings">SETTINGS</string>
+    <string name="change_wifi_name">CHANGE THE NAME OF THE WIFI</string>
+    <string name="change_wifi_psw">CHANGE THE WIFI PASSWORD</string>
+    <string name="change_function">FUNCTION INTRODUCTION</string>
+    <string name="change_reset">Restore the factory Settings</string>
+
+    <string name="change_dlg_wifi_name">CHANGE THE NAME OF THE WIFI</string>
+    <string name="change_dlg_wifi_psw">CHANGE THE WIFI PASSWORD</string>
+    <string name="change_dlg_psw_tips">Password length of not less than 8 characters</string>
+
+    <!--activity_splash-->
+    <string name="play">PLAY</string>
+    <string name="set_wifi">WIFI SETTINGS</string>
+    <string name="save_photo"></string>
+
+    <!--activity_cache-->
+    <string name="offline_caching">OFFLINE CACHING</string>
+    <string name="delete">Delete</string>
+
+    <!--activity_cache_video_land-->
+    <string name="play_duration">Playing time</string>
+    <string name="total_duration">The total time</string>
+
+    <!--item_cache_activity-->
+    <string name="video_name">The name of the video</string>
+    <string name="video_size">Video size</string>
+
+    <!--name_dialog-->
+    <string name="cancel">CANCEL</string>
+    <string name="sure">ENSURE</string>
+
+    <!--psw_dialog-->
+    <string name="hint">Password length of not less than 8 characters</string>
+
+    <!--reset_dialog-->
+    <string name="confirm_reset">Are you sure you want to restore the factory Settings?</string>
+    <string name="quit">Press again to exit the program</string>
+    <string name="quit_setting">Press again to exit the setting</string>
+    <string name="none">NONE</string>
+    <string name="wifi_notconnected">WIFI NOT CONNECTED</string>
+    <string name="wifi_not_open">WIFI NOT OPEN</string>
+    <string name="checkwifi">PLEASE CHECK WIFI MANUALLY</string>
+    <string name="get_wifi_channel">Current Channel</string>
+    <string name="change_wifi_channel">Change Channel</string>
+    <string name="setchannel_success">The channel is set up successfully</string>
+    <string name="setchannel_fail">Channel setup failed, please try again</string>
+    <string name="getchannel_success">Successful access to the channel : </string>
+    <string name="getchannel_fail">Failed to get the channel</string>
+    <string name="chosechn">Please select a channel</string>
+    <string name="change_wifi_port">串口帧头(为16进制格式0x00-0xff，长度4位</string>
+    <string name="change_wifi_sound">Audio selection</string>
+
+
+</resources>

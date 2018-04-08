@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_cache"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000">
+
+        <Button
+            android:id="@+id/activity_cache_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/settings_back"
+            android:onClick="click" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="8dp"
+            android:text="@string/offline_caching"
+            android:textColor="@android:color/white"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp">
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="@color/lightgray1"
+            android:popupBackground="@color/lightgray1" />
+
+        <android.support.v7.widget.SearchView
+            android:id="@+id/sreach_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:imeOptions="actionSearch"
+            app:closeIcon="@null"
+            app:defaultQueryHint="请输入"
+            app:queryHint="请输入">
+
+        </android.support.v7.widget.SearchView>
+
+        <Button
+            android:id="@+id/btn_sreach1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="搜索" />
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <com.baoyz.swipemenulistview.SwipeMenuListView
+        android:id="@+id/activity_cache_listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#99ffffff" />
+
+
+</LinearLayout>

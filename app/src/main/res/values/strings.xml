@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">LVAS</string>
+
+    <!--SettingsActivity-->
+    <string name="wifi_name">名称不能为空</string>
+    <string name="wifi_psw">密码不能为空</string>
+
+    <string name="set_error">设置失败,请重试</string>
+
+    <string name="set_name_success">设置名称成功,重启设备后生效</string>
+    <string name="set_name_fail">设置名称失败,请重试</string>
+
+    <string name="set_psw_success">设置密码成功,重启设备后生效</string>
+    <string name="set_psw_fail">设置密码失败,请重试</string>
+
+    <string name="reset_success">恢复出厂设置成功</string>
+    <string name="reset_fail">恢复出厂设置失败,请重试</string>
+
+    <!--PlayActivity-->
+    <string name="line_error">无法连接,请检查网络</string>
+
+    <!--activity_setting-->
+    <string name="settings">设置</string>
+    <string name="change_wifi_name">更改WiFi名称</string>
+    <string name="change_wifi_psw">更改WiFi密码</string>
+    <string name="change_dlg_wifi_name">更改WiFi名称</string>
+    <string name="change_dlg_wifi_psw">更改WiFi密码</string>
+    <string name="change_dlg_psw_tips">密码长度不少于8个字符</string>
+    <string name="change_function">功能介绍</string>
+    <string name="change_reset">恢复出厂设置</string>
+
+    <!--activity_splash-->
+    <string name="play">播放</string>
+    <string name="set_wifi">WIFI设置</string>
+    <string name="save_photo">截图保存成功</string>
+
+    <!--activity_cache-->
+    <string name="offline_caching">离线缓存</string>
+    <string name="delete">删除</string>
+    <string name="connect">请连接盒子的wifi信号,默认名为ZJBox</string>
+
+    <!--activity_cache_video_land-->
+    <string name="play_duration">播放时间</string>
+    <string name="total_duration">总时间</string>
+
+    <!--item_cache_activity-->
+    <string name="video_name">视频名称</string>
+    <string name="video_size">视频大小</string>
+
+    <!--name_dialog-->
+    <string name="cancel">取消</string>
+    <string name="sure">确定</string>
+
+    <!--psw_dialog-->
+    <string name="hint">密码长度不少于8个字符</string>
+
+    <!--reset_dialog-->
+    <string name="confirm_reset">您确定要恢复出厂设置?</string>
+    <string name="Checknet">请检查WIFI连接</string>
+    <string name="thiswifi">当前WIFI:</string>
+
+
+    <!--CheckNetActivity-->
+    <string name="quit">再按一次退出程序</string>
+    <string name="quit_setting">再按一次退出设置</string>
+    <string name="none">无</string>
+    <string name="wifi_notconnected">wifi未连接</string>
+    <string name="wifi_not_open">wifi未打开</string>
+    <string name="checkwifi">请手动检查WIFI</string>
+    <string name="checkwifi2">检查WIFI</string>
+    <string name="next">下一步</string>
+    <string name="get_wifi_channel">当前WIFI信道</string>
+    <string name="change_wifi_channel">更改WIFI信道</string>
+    <string name="setchannel_success">信道设置成功</string>
+    <string name="setchannel_fail">信道设置失败,请重试</string>
+    <string name="getchannel_success">成功获取信道 ：</string>
+    <string name="getchannel_fail">获取信道失败</string>
+    <string name="chosechn">请选择信道</string>
+    <string name="change_wifi_port">串口帧头(为16进制格式0x00-0xff)</string>
+    <string name="change_wifi_sound">音频选择</string>
+
+</resources>

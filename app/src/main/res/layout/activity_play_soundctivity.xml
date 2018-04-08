@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#774D4D4D"
+    android:orientation="vertical"
+    tools:context="zhongjing.dcyy.com.ui.activity.PlaySoundctivity">
+
+    <TextView
+        android:id="@+id/activity_cache_video_land_tv_play_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="歌曲名：" />
+
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/activity_cache_video_land_ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/activity_cache_video_land_iv_play"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="16dp"
+            android:onClick="click"
+            android:src="@drawable/cache_video_play" />
+
+        <!--播放时间-->
+        <TextView
+            android:id="@+id/activity_cache_video_land_tv_play_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text=""
+            android:textSize="15dp" />
+
+        <SeekBar
+            android:id="@+id/activity_cache_video_land_sb"
+            android:layout_width="400dp"
+            android:layout_height="30dp"
+            android:progress="60" />
+
+        <!--播放总时间-->
+        <TextView
+            android:id="@+id/activity_cache_video_land_tv_total_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:text=""
+            android:textSize="15dp" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+</android.support.v7.widget.LinearLayoutCompat>

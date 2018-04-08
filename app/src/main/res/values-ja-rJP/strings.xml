@@ -1,0 +1,81 @@
+<resources>
+    <string name="app_name">ZJBOX</string>
+    <string name="Checknet">WIFIの接続状態をお確認ください</string>
+    <string name="thiswifi">WIFI名:</string>
+    <string name="connect">ZJBOX…と言う名称のWIFIを選択してお接続ください。</string>
+    <string name="checkwifi2">WIFIを確認ください</string>
+    <string name="next">再生画面へ</string>
+
+    <!--SettingsActivity-->
+    <string name="wifi_name">名前を入力して下さい</string>
+    <string name="wifi_psw">8文字以上の英字と数字の組み合わせ</string>
+
+    <string name="set_error">セットアップエラーです、もう一度お試しください</string>
+
+    <string name="set_name_success">WiFiアドレス変更後、再起動をお願いします</string>
+    <string name="set_name_fail">無線LANの名前を設定できませんでした。もう一度お試しください</string>
+
+    <string name="set_psw_success">WiFi暗証番号の変更後は再起動をお願いします</string>
+    <string name="set_psw_fail">パスワードが正しく設定されていません。もう一度お試しください</string>
+
+    <string name="reset_success">To restore factory Settings</string>
+    <string name="reset_fail">Failed to restore the factory Settings, please try again</string>
+
+    <!--PlayActivity-->
+    <string name="line_error">接続失敗，=ネットワークが正しい事を確認して下さい</string>
+
+    <!--activity_setting-->
+    <string name="settings">設定</string>
+    <string name="change_wifi_name">WIFI名称の変更設定</string>
+    <string name="change_dlg_wifi_name">WIFI名称の変更</string>
+    <string name="change_wifi_psw">WIFI暗証番号の変更設定</string>
+    <string name="change_dlg_wifi_psw">WIFI暗証番号の変更</string>
+    <string name="change_dlg_psw_tips">8文字以上の英字と数字の組み合わせ</string>
+    <string name="change_function">FUNCTION INTRODUCTION</string>
+    <string name="change_reset">工場出荷状態に戻る</string>
+
+    <string name="save_photo">画像保存OK</string>
+
+    <!--activity_splash-->
+    <string name="play">再生</string>
+    <string name="set_wifi">WiFiの設定</string>
+
+    <!--activity_cache-->
+    <string name="offline_caching">保存先ドライブ</string>
+    <string name="delete">Delete</string>
+
+    <!--activity_cache_video_land-->
+    <string name="play_duration">再生時間</string>
+    <string name="total_duration">The total time</string>
+
+    <!--item_cache_activity-->
+    <string name="video_name">The name of the video</string>
+    <string name="video_size">Video size</string>
+
+    <!--name_dialog-->
+    <string name="cancel">取消</string>
+    <string name="sure">決定</string>
+
+    <!--psw_dialog-->
+    <string name="hint">8文字以上の英文と数字の組み合わせ</string>
+
+    <!--reset_dialog-->
+    <string name="confirm_reset">工場出荷状態に戻りますか？</string>
+    <string name="quit">本体戻るボタンを2回押すとZJBOXが閉じます</string>
+    <string name="quit_setting">Press again to exit the setting</string>
+    <string name="none">WIFIはＯＮにしてください！</string>
+    <string name="wifi_notconnected">WIFIが接続されていません</string>
+    <string name="wifi_not_open">WIFIが開かない</string>
+    <string name="checkwifi">WIFIをＯＮにしてください!</string>
+    <string name="get_wifi_channel">Current Channel</string>
+    <string name="change_wifi_channel">WIFIチャンネルの変更</string>
+    <string name="setchannel_success">WIFIチャンネルの接続完了</string>
+    <string name="setchannel_fail">WIFIチャンネルの接続に失敗しました、再接続してください</string>
+    <string name="getchannel_success">WIFIチャンネルがご使用できます: </string>
+    <string name="getchannel_fail">WIFIチャンネルの接続失敗</string>
+    <string name="chosechn">WIFIチャンネルを選択ください</string>
+    <string name="change_wifi_port">串口帧头(为16进制格式0x00-0xff，长度4位</string>
+    <string name="change_wifi_sound">オーディオの選択</string>
+
+
+</resources>

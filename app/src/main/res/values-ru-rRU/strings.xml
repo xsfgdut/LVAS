@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">ZJBOX</string>
+
+    <!--SettingsActivity-->
+    <string name="wifi_name">Имя не может быть пустым</string>
+    <string name="wifi_psw">Пароль не может быть пустым</string>
+
+    <string name="set_error">Установка не удалась, попробуйте еще раз</string>
+
+    <string name="set_name_success">Установить имя успеха, после перезагрузки, чтобы изменения вступили в силу</string>
+    <string name="set_name_fail">Установить имя не удалось, попробуйте еще раз</string>
+
+    <string name="set_psw_success">После вступления в силу пароля успешно, перезагрузите устройство</string>
+    <string name="set_psw_fail">Пароль не удалось, попробуйте еще раз</string>
+
+    <string name="reset_success">Успешно Восстановление заводских настроек</string>
+    <string name="reset_fail">Factory Reset не удалось, попробуйте еще раз</string>
+
+    <!--PlayActivity-->
+    <string name="line_error">Не удалось подключиться, проверьте сеть</string>
+
+    <!--activity_setting-->
+    <string name="settings">устанавливать</string>
+    <string name="change_wifi_name">Изменить имя Wi-Fi</string>
+    <string name="change_wifi_psw">Изменение пароля Wi-Fi</string>
+    <string name="change_dlg_wifi_name">Изменить имя Wi-Fi</string>
+    <string name="change_dlg_wifi_psw">Изменение пароля Wi-Fi</string>
+    <string name="change_dlg_psw_tips">Пароль не менее 8 символов</string>
+    <string name="change_function">черты</string>
+    <string name="change_reset">Восстановление заводских настроек</string>
+
+    <!--activity_splash-->
+    <string name="play">играть</string>
+    <string name="set_wifi">настройки WIFI</string>
+    <string name="save_photo"></string>
+
+    <!--activity_cache-->
+    <string name="offline_caching">Offline кэширование</string>
+    <string name="delete">удалять</string>
+    <string name="connect">Пожалуйста, WiFi соединения поля сигнала, имя по умолчанию ZJBox</string>
+
+    <!--activity_cache_video_land-->
+    <string name="play_duration">время воспроизведения</string>
+    <string name="total_duration">полное время</string>
+
+    <!--item_cache_activity-->
+    <string name="video_name">название видео</string>
+    <string name="video_size">размер видео</string>
+
+    <!--name_dialog-->
+    <string name="cancel">отменен</string>
+    <string name="sure">определить</string>
+
+    <!--psw_dialog-->
+    <string name="hint"> Пароль не менее 8 символов</string>
+
+    <!--reset_dialog-->
+    <string name="confirm_reset">Вы уверены, что хотите восстановить заводские настройки?</string>
+    <string name="Checknet">Пожалуйста, проверьте подключение WIFI</string>
+    <string name="thiswifi">В настоящее время WIFI:</string>
+
+
+    <!--CheckNetActivity-->
+    <string name="quit">Нажмите еще раз, чтобы выйти из программы</string>
+    <string name="quit_setting">Нажмите еще раз, чтобы выйти из настройки</string>
+    <string name="none">нет</string>
+    <string name="wifi_notconnected">WiFi не подключен</string>
+    <string name="wifi_not_open">WiFi не открыт</string>
+    <string name="checkwifi">Пожалуйста, проверьте вручную WIFI</string>
+    <string name="checkwifi2">Проверьте WIFI</string>
+    <string name="next">следующий шаг</string>
+    <string name="get_wifi_channel">WIFI текущего канала</string>
+    <string name="change_wifi_channel">Изменение WIFI канала</string>
+    <string name="setchannel_success">Настройки канала успеха</string>
+    <string name="setchannel_fail">Настройка канала не удалось, попробуйте еще раз</string>
+    <string name="getchannel_success">Успешный канал приобретения : </string>
+    <string name="getchannel_fail">Неполучение канала</string>
+    <string name="chosechn">Пожалуйста, выберите канал</string>
+    <string name="change_wifi_port">串口帧头(为16进制格式0x00-0xff，长度4位</string>
+    <string name="change_wifi_sound">声音</string>
+
+</resources>
